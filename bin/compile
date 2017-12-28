@@ -12,7 +12,11 @@ echo "Cloned repository"
 git --git-dir temp_git_clone_dir/.git checkout $git_clone_sha
 echo "Checked out GIT_CLONE_SHA"
 
-cp temp_git_clone_dir/.git $1/.git
+mkdir $1/.git
+cp -r temp_git_clone_dir/.git/* $1/.git
 echo "Copied .git directory"
+
+# Debug
+git --git-dir $1/.git status
 
 rm -rf temp_git_clone_dir
