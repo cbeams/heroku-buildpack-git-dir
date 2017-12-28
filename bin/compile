@@ -20,3 +20,10 @@ echo "Copied .git directory"
 git -C $1 status
 
 rm -rf temp_git_clone_dir
+
+# Debug
+if [ -f $1/.git ]; then
+  echo ".git directory found"
+else
+  echo ".git directory not found"
+fi
