@@ -1,4 +1,4 @@
-!#/bin/sh
+#!/bin/sh
 
 # Both GIT_CLONE_URL and GIT_CLONE_SHA must be set
 
