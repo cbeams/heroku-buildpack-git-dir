@@ -2,18 +2,13 @@
 
 # Both GIT_CLONE_URL and GIT_CLONE_SHA must be set
 
-if [[ -v $GIT_CLONE_URL ]]; then
-  echo "GIT_CLONE_URL found"
-else
-  echo "GIT_CLONE_URL not found!"
+if [ "$GIT_CLONE_URL" == "" ]; then
   exit 1
 fi
 
-if [[ -v $GIT_CLONE_SHA ]]; then
-  echo "GIT_CLONE_SHA found"
-else
-  echo "GIT_CLONE_SHA not found!"
+if [ "$GIT_CLONE_SHA" == "" ]; then
   exit 1
 fi
 
+echo "Git Clone"
 exit 0
