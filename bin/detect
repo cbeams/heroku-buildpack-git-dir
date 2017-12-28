@@ -1,0 +1,17 @@
+!#/bin/sh
+
+# Both GIT_CLONE_URL and GIT_CLONE_SHA must be set
+
+if [[ -v $GIT_CLONE_URL ]]; then
+  echo "GIT_CLONE_URL found"
+else
+  exit 1
+fi
+
+if [[ -v $GIT_CLONE_SHA ]]; then
+  echo "GIT_CLONE_SHA found"
+else
+  exit 1
+fi
+
+exit 0

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+rm -rf $1
+git clone $GIT_CLONE_URL $1
+echo "Cloned repository"
+
+cd $1
+git checkout $GIT_CLONE_SHA
+echo "Checked out GIT_CLONE_SHA"
