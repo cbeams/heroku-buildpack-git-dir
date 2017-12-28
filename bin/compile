@@ -6,7 +6,7 @@ ENV_DIR=${3:-}
 git_clone_url="$(cat $ENV_DIR/GIT_CLONE_URL)"
 git_clone_sha="$(cat $ENV_DIR/GIT_CLONE_SHA)"
 
-rm -rf $1
+rm -rf $1/* $1/.*
 git clone $git_clone_url $1
 echo "Cloned repository"
 
