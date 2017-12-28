@@ -9,8 +9,7 @@ git_clone_sha="$(cat $ENV_DIR/GIT_CLONE_SHA)"
 git clone $git_clone_url temp_git_clone_dir
 echo "Cloned repository"
 
-cd temp_git_clone_dir
-git checkout $git_clone_sha
+git --git-dir temp_git_clone_dir/.git checkout $git_clone_sha
 echo "Checked out GIT_CLONE_SHA"
 
 cp temp_git_clone_dir/.git $1/.git
