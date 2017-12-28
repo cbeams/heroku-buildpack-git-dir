@@ -5,12 +5,14 @@
 if [[ -v $GIT_CLONE_URL ]]; then
   echo "GIT_CLONE_URL found"
 else
+  echo "GIT_CLONE_URL not found!"
   exit 1
 fi
 
 if [[ -v $GIT_CLONE_SHA ]]; then
   echo "GIT_CLONE_SHA found"
 else
+  echo "GIT_CLONE_SHA not found!"
   exit 1
 fi
 
