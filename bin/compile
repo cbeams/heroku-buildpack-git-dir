@@ -3,8 +3,8 @@
 
 set -x
 ENV_DIR=${3:-}
-heroku_git_username="$(cat $ENV_DIR/HEROKU_GIT_USERNAME)"; set +x
-heroku_git_password="$(cat $ENV_DIR/HEROKU_GIT_PASSWORD)"; set -x
+heroku_git_username="$(cat $ENV_DIR/NETRC_HEROKU_LOGIN)"; set +x
+heroku_git_password="$(cat $ENV_DIR/NETRC_HEROKU_PASSWORD)"; set -x
 heroku_app_name="$(cat $ENV_DIR/HEROKU_APP_NAME)"
 heroku_slug_commit="$(cat $ENV_DIR/HEROKU_SLUG_COMMIT)"
 
@@ -16,7 +16,7 @@ EOM
 
 git clone https://git.heroku.com/$heroku_app_name.git temp_git_clone_dir
 
-git -C temp_git_clone_dir checkout #$heroku_slug_commit
+git -C temp_git_clone_dir checkout $heroku_slug_commit
 
 rm -rf $1/.git
 mkdir $1/.git
