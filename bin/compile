@@ -15,7 +15,7 @@ EOM
 
 git clone https://git.heroku.com/$heroku_app_name.git temp_git_clone_dir
 
-git -C temp_git_clone_dir checkout $SOURCE_VERSION
+git -C temp_git_clone_dir checkout master
 
 rm -rf $1/.git
 mkdir $1/.git
