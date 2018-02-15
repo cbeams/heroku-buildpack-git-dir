@@ -2,24 +2,6 @@
 
 # HEROKU_APP_NAME, HEROKU_GIT_USERNAME and HEROKU_GIT_PASSWORD must be set
 
-if [ "$HEROKU_APP_NAME" == "" ]; then
-    echo "HEROKU_APP_NAME was not set"
-    echo "Run 'heroku labs:enable runtime-dyno-metadata'"
-    echo "See https://devcenter.heroku.com/articles/dyno-metadata for more information"
-    exit 1
-fi
+echo "TEST"
+exit 1
 
-if [ "$HEROKU_GIT_USERNAME" == "" ]; then
-    echo "HEROKU_GIT_USERNAME was not set"
-    echo "Run 'heroku config:set HEROKU_GIT_USERNAME=[value from your ~/.netrc]'"
-    exit 1
-fi
-
-if [ "$HEROKU_GIT_PASSWORD" == "" ]; then
-    echo "HEROKU_GIT_PASSWORD was not set"
-    echo "Run 'heroku config:set HEROKU_GIT_PASSWORD=[value from your ~/.netrc]'"
-    exit 1
-fi
-
-echo "Git Clone"
-exit 0
