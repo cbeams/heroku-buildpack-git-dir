@@ -3,5 +3,5 @@
 # HEROKU_APP_NAME, HEROKU_GIT_USERNAME and HEROKU_GIT_PASSWORD must be set
 
 echo "TEST"
-exit 1
+exit 0
 
