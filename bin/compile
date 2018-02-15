@@ -12,8 +12,11 @@ echo "HERE"
 echo $1
 echo "THERE"
 
-touch $1/foobar1
+echo "test" > afile
 
+cat afile
+
+touch $1/foobar1
 ls -l $1/foobar1
 
 #echo "machine git.heroku.com" > $1/.netrc; set +x
