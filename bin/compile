@@ -8,6 +8,8 @@ heroku_git_password="$(cat $ENV_DIR/NETRC_HEROKU_PASSWORD)"; set -x
 heroku_app_name="$(cat $ENV_DIR/HEROKU_APP_NAME)"
 heroku_slug_commit="$(cat $ENV_DIR/HEROKU_SLUG_COMMIT)"
 
+echo "SOURCE_VERSION: [$SOURCE_VERSION]"
+
 cat > $HOME/.netrc <<EOM
 machine git.heroku.com
   password $heroku_git_password
