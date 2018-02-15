@@ -8,6 +8,7 @@ heroku_git_password="$(cat $ENV_DIR/HEROKU_GIT_PASSWORD)"; set -x
 heroku_app_name="$(cat $ENV_DIR/HEROKU_APP_NAME)"
 heroku_slug_commit="$(cat $ENV_DIR/HEROKU_SLUG_COMMIT)"
 
+echo "PWD: [$PWD]"
 echo "HOME: [$HOME]"
 
 #echo "machine git.heroku.com" > $1/.netrc; set +x
