@@ -18,6 +18,7 @@ git clone https://git.heroku.com/$heroku_app_name.git temp_git_clone_dir
 
 git -C temp_git_clone_dir checkout #$heroku_slug_commit
 
+rm -rf $1/.git
 mkdir $1/.git
 cp -r temp_git_clone_dir/.git/* $1/.git
 
