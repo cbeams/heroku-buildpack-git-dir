@@ -3,19 +3,10 @@
 
 set -x
 ENV_DIR=${3:-}
-netrc_heroku_login="$(cat $ENV_DIR/NETRC_HEROKU_LOGIN)"; set +x
-netrc_heroku_password="$(cat $ENV_DIR/NETRC_HEROKU_PASSWORD)"; set -x
-heroku_app_name="$(cat $ENV_DIR/HEROKU_APP_NAME)"
 
-cat > $HOME/.netrc <<EOM
-machine git.heroku.com
-  password $netrc_heroku_password
-  login $netrc_heroku_login
-EOM
+git clone https://github.com/cbeams/pricenode.git temp_git_clone_dir
 
-git clone https://git.heroku.com/$heroku_app_name.git temp_git_clone_dir
-
-git -C temp_git_clone_dir checkout master
+git -C temp_git_clone_dir checkout refactor
 
 rm -rf $1/.git
 mkdir $1/.git
